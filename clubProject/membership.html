@@ -1,0 +1,81 @@
+<head>
+	<title>Application page</title>
+	<link rel="stylesheet" href="club.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul class="navigation" id="navigation">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="activities.html">Activities</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li class="active"><a href="membership.html">Apply Now!</a></li>
+			</ul>
+		</nav>
+		<br>
+		<br>
+		<h1>Apply Now!</h1>
+	</header>
+	<main>
+			<div class="applicationForm">
+				<label for="userName">Name :</label> <input type="text" name="userName" id="userName" placeholder="Enter name" required maxlength="20">
+
+				<label for="userEmail">email :</label> <input type="email" name="userEmail" id="userEmail" placeholder="Enter email" required>
+
+				<label for="enterPassword">Password :</label> <input type="Password" name="enterPassword" id="enterPassword" placeholder="Enter Password" required minlength="8" maxlength="20">
+
+				<label for="enterSkillLevel">Level :</label>
+				<select name="enterSkillLevel" id="enterSkillLevel">
+					<option value="">Please select an option</option>
+					<option value="Beginner level 1">Beginner 1</option>
+					<option value="Beginner level 2">Beginner 2</option>
+					<option value="Intermediate level 1">Intermediate 1</option>
+					<option value="Intermediate level 1">Intermediate 2</option>
+					<option value="Expert">Expert</option>
+				</select>
+				<label for="enterComments">Comment :</label><textarea id="enterComments" cols="40" rows="5" placeholder="Want to say something nice"></textarea>
+				<button class="applyButton" type="button" style="background-color: lightcyan; border-radius: 6px">Sign up!</button>
+			</div>
+				<!--this dialog box is hidden and only shows up after the user has signed up-->
+		<section id="thanksDialog">
+			<div id="thanksDialog2">
+				<h3>Thanks for Signing Up</h3>
+				<div id="thanksDialog1">
+					<p>Text for form</p>
+				</div>
+				<br>
+				<br>
+				<button id="closeButton" type="button" style="background-color: lightcyan; border-radius: 6px">Close X</button>
+			</div>
+		</section>
+
+	<br>
+	<br>
+		<!--js code which takes input from user and displays it on innerhtml when sign up button is clicked-->
+		<!-- it uses DOM classlist,add to store all values-->
+		<script type="text/javascript">
+			var userName = document.querySelector("#userName");
+			var userEmail = document.querySelector("#userEmail");
+			var userLevel = document.querySelector("#enterSkillLevel");
+			var showDialog = document.querySelector("#thanksDialog");
+			var button1 = document.querySelector("button");
+			var dialogBox = document.querySelector("#thanksDialog1");
+			button1.addEventListener("click", function(){
+				dialogBox.innerHTML = "Your name: "+userName.value+ ", "+"email: " +userEmail.value+ ", "+"Level: "+userLevel.value;
+				showDialog.classList.add("show");
+			})
+
+			//this close button uses DOM classlist remove to close the dialog box
+			var button2 = document.querySelector("#closeButton");
+			button2.addEventListener("click", function() {
+				showDialog.classList.remove("show");
+			})
+
+		</script>
+	</main>
+	<footer>
+		&copy; 2021 Bay Area Calligraphy Club 
+	</footer>
+</body>
+

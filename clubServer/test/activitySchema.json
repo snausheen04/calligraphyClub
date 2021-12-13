@@ -1,0 +1,21 @@
+{
+   "type": "object",
+    "properties": {
+        "name": {
+            "description":"Activity name",
+            "type": "string",
+            "minLength":10,
+            "maxLength":30
+        },
+        "dates":{
+            "description":"Activity Dates",
+            "type": "array",
+            "items":{
+                "type":"string"
+            }
+        }
+    },
+    "required": ["name","dates"],
+    "additionalProperties": false
+
+}

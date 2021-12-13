@@ -1,0 +1,67 @@
+<head>
+	<title>Activities page</title>
+	<link rel="stylesheet" href="club.css">
+	<script type="text/javascript" id="sourceJS" src="eventData.js"></script>
+</head>
+<body onload="addAll();">
+	<header>
+		<nav>
+			<ul class="navigation" id="navigation">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="activities.html">Activities</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="membership.html">Apply Now!</a></li>
+			</ul>
+		</nav>
+		<br>
+		<br>
+		<br>
+		<h1>Club Activities</h1>
+	</header>
+
+	<main>
+		<br>
+		<div id="svgIcons">
+		<svg height="51" viewBox="0 0 51 51" width="51" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 3)"><path d="m16.5 11.5v-9c0-1.1045695-.8954305-2-2-2h-12c-1.1045695 0-2 .8954305-2 2v9c0 1.1045695.8954305 2 2 2h12c1.1045695 0 2-.8954305 2-2z"/><path d="m14.5 10.5v-3c0-.55228475-.4477153-1-1-1h-10c-.55228475 0-1 .44771525-1 1v3c0 .5522847.44771525 1 1 1h10c.5522847 0 1-.4477153 1-1z"/><path d="m6.5 3.498h8"/><path d="m2.5 3.5h2"/></g></svg> 
+		<svg height="51" viewBox="0 0 51 51" width="51" xmlns="http://www.w3.org/2000/svg"><path d="m7.24264069 2.24264069c.5-2.5 4.34314571-2.65685425 6.00000001-1 1.6034073 1.60340734 1.4999617 4.3343931 0 6l-6.00000001 6.00000001-6-6.00000001c-1.65685425-1.65685425-1.65685425-4.34314575 0-6 1.54996042-1.54996043 5.5-1.5 6 1z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.257 4.257)"/></svg>
+		<svg height="51" viewBox="0 0 51 51" width="51" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3)"><path d="m12.5 12.5v-7l-5-5h-5c-1.1045695 0-2 .8954305-2 2v10c0 1.1045695.8954305 2 2 2h8c1.1045695 0 2-.8954305 2-2z"/><path d="m2.5 7.5h5"/><path d="m2.5 9.5h7"/><path d="m2.5 11.5h3"/><path d="m7.5.5v3c0 1.1045695.8954305 2 2 2h3"/></g></svg> 
+		<svg height="51" viewBox="0 0 51 51" width="51" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 2)"><path d="m2.5 6.5h6c1.1045695 0 2 .8954305 2 2v2.5c0 2.4852814-2.01471863 4.5-4.5 4.5h-1c-2.48528137 0-4.5-2.0147186-4.5-4.5v-2.5c0-1.1045695.8954305-2 2-2zm8 2h1c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2h-1"/><path d="m4.5 4.5v-4"/><path d="m6.5 4.5v-2"/></g></svg>
+		</div
+		<br>
+		<h2>&#127804 Activities &#127804</h2>
+		<ul id="activitiesList">
+			<li>Browse through calligraphy portraits</li>
+			<li>Share your views and show some love</li>
+			<li>Browse through beginners workshop material to get started with Calligrpahy</li>
+			<li>Know more about upcoming meet&greet</li>
+		</ul>
+		<br>
+		<h2>Activity Schedule &#128198</h2>
+		<div id="content"></div>
+		<script type="text/javascript">
+			function init(name,dates) {
+		      var ele = document.getElementById('content');
+		      var table = document.createElement('table');
+		      var tr = document.createElement('tr');
+		      var td = document.createElement('td');
+		      var td1 = document.createElement('td');
+		      var txt = document.createTextNode(name);
+		      var txt1 = document.createTextNode(dates);
+
+		      td.appendChild(txt);
+		      td1.appendChild(txt1);
+		      tr.appendChild(td);
+		      tr.appendChild(td1);
+		      table.appendChild(tr);
+		      ele.appendChild(table);
+		    }
+    		function addAll() {
+  				events.forEach(function(lang){
+    			init(lang.name,lang.dates);
+  				});
+			}
+		</script>
+		
+		<p>Watch out this space for more details coming soon!</p>
+	</main>
+</body>

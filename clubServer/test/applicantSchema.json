@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "description":"Applicant name",
+            "type": "string"
+        },
+        "email": {
+            "description":"Applicant email",
+            "type": "string",
+            "minLength": 10
+        },
+        "comments":{
+            "description": "Comments/feedback for club",
+                   "type": "string",
+              "maxLength": 50
+        }
+    },
+    "required": ["name","email","comments"],
+    "additionalProperties": false
+
+}
