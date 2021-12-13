@@ -1,0 +1,166 @@
+h1 {
+	font-family: cursive;
+	text-align: left;
+	margin: 1rem 0;
+	color: royalblue;
+}
+
+h2 {	
+	font-family: cursive;
+	/* text-align: lefcet; */
+	margin: 1rem 0;
+	color: royalblue;
+}
+
+#activitiesList {
+	display: block;
+	text-align: left;
+}
+
+#svgIcons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: lightcyan;
+	font-family: cursive;
+	font-style: oblique;
+	
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: auto;
+	width: 100%;
+	background-color: rgb(184, 138, 168, 0.5);
+	margin: 5px;
+	justify-content: space-between;
+}
+
+ul {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	flex-direction: row;	
+}
+
+main {
+	width: 80vw;
+	/* height: 100vh; */
+  	background-color: lightblue;
+	text-align: center;	
+}
+
+footer {
+	text-align: center;
+	font-style: serif;
+}
+svg {
+	display: block;
+	flex-direction: row;
+	text-align: center;
+}
+
+.navigation {
+	list-style-type: none;
+  text-decoration: none;
+}
+
+.active {
+	background-color: lightyellow;
+}
+
+footer {
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+thead {
+	text-decoration: underline;
+	font: bolder;
+}
+
+table {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	border: 3px solid green;
+	background-color: lightcyan;
+}
+
+table td {
+	border: 1px solid green;
+	border-collapse: collapse;
+}
+
+th {
+	border: 1px solid green;
+	border-collapse: collapse;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: lightskyblue;
+}
+
+tbody tr:nth-child(even) {
+	background-color: lightseagreen;
+}
+
+input:valid {
+	border-color: green;
+	background-color: lightgreen;
+}
+
+input:invalid {
+	border-color: red;
+	background-color: lightpink;
+}
+
+
+section.doodleArea {
+	border: dashed;
+	margin: 1em;
+	padding: 0.5em;
+	background-color: antiquewhite;
+}
+#thanksDialog2 {
+	display: none;
+}
+
+#thanksDialog2.showing {
+	display: block;
+	position: fixed;
+	font-family: 'Times New Roman', Times, serif;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	border: 3px solid green;
+  	background-color: rgba(0, 0, 0, 0.4);
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.applicationForm {
+    display: grid;
+    grid-template-columns: 10rem 20rem; 
+    grid-row-gap: 1em;
+    grid-column-gap: 1em;
+    border-radius: 1rem;
+    padding: 1.0rem;
+}
+
+#userName, #userEmail, #enterPassword, #enterSkillLevel, #enterComments {
+    font-family: sans-serif;
+    justify-self: start; 
+	font-style: cursive;
+	border-radius: 6px
+}
