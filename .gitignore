@@ -6,7 +6,6 @@ npm-debug.log*
 # Bundler related directories
 .cache
 dist
-.proxyrc.json
 
 # Dependency directories
 node_modules
